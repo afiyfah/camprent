@@ -1,0 +1,7 @@
+Options -Indexes
+
+<FilesMatch "^(\.env|\.gitignore|composer\.(json|lock)|README\.md)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+</FilesMatch>
