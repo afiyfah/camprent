@@ -76,3 +76,15 @@
 }
 @media(max-width:420px){.cms-stat-grid{grid-template-columns:1fr}.cms-stat{display:flex;align-items:center;justify-content:space-between}.cms-stat strong{margin:0}}
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+
+/* Fase 2: pastikan kartu artikel menampilkan foto dan teks secara utuh. */
+.article-card{display:flex;flex-direction:column;min-width:0;background:#fff}
+.article-image{display:block;flex:0 0 auto;width:100%;height:190px;overflow:hidden}
+.article-image img{display:block;width:100%;height:100%;object-fit:cover}
+.article-content{display:block;flex:1 1 auto;min-width:0;padding:20px;background:#fff;color:var(--ink)}
+.article-content .article-title{display:block;margin:9px 0 10px;font-family:'Manrope',sans-serif;font-size:18px;font-weight:800;line-height:1.35;letter-spacing:-.025em;color:var(--forest)}
+.article-content .article-title a{display:inline;color:var(--forest);text-decoration:none}
+.article-content .article-title a:hover{color:var(--orange2)}
+.article-content p{display:block;margin:0 0 13px;font-size:12px;line-height:1.7;color:#68746b}
+.article-content .text-link{display:inline-block;font-size:11px;font-weight:800}
