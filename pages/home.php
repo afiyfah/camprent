@@ -122,7 +122,12 @@ $articleCount = (int) $pdo->query("SELECT COUNT(*) FROM articles WHERE status = 
                         <a class="article-image" href="<?= e(url('article', ['slug' => $article['slug']])) ?>">
                             <?php if (!empty($article['cover_image'])): ?><img src="<?= e($article['cover_image']) ?>" alt="<?= e($article['title']) ?>" loading="lazy"><?php else: ?><div class="image-fallback" aria-hidden="true">✦</div><?php endif; ?>
                         </a>
-                        <div class="article-content"><span class="article-meta">Camp journal · <?= e(date_id($article['published_at'], false)) ?></span><h3><a href="<?= e(url('article', ['slug' => $article['slug']])) ?>"><?= e($article['title']) ?></a></h3><p><?= e($article['excerpt']) ?></p><a class="text-link" href="<?= e(url('article', ['slug' => $article['slug']])) ?>">Baca artikel ↗</a></div>
+                        <div class="article-content">
+                            <span class="article-meta">Camp journal · <?= e(date_id($article['published_at'], false)) ?></span>
+                            <h3 class="article-title"><a href="<?= e(url('article', ['slug' => $article['slug']])) ?>"><?= e($article['title']) ?></a></h3>
+                            <p><?= e($article['excerpt']) ?></p>
+                            <a class="text-link" href="<?= e(url('article', ['slug' => $article['slug']])) ?>">Baca artikel ↗</a>
+                        </div>
                     </article>
                 <?php endforeach; ?>
             </div>

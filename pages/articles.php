@@ -45,7 +45,7 @@ $articles = $stmt->fetchAll();
                         </a>
                         <div class="article-content">
                             <span class="article-meta"><?= e(date_id($article['published_at'], false)) ?><?php if (!empty($article['author_name'])): ?> · <?= e($article['author_name']) ?><?php endif; ?></span>
-                            <h3><a href="<?= e(url('article', ['slug' => $article['slug']])) ?>"><?= e($article['title']) ?></a></h3>
+                            <h3 class="article-title"><a href="<?= e(url('article', ['slug' => $article['slug']])) ?>"><?= e($article['title']) ?></a></h3>
                             <p><?= e($article['excerpt']) ?></p>
                             <a class="text-link" href="<?= e(url('article', ['slug' => $article['slug']])) ?>">Baca selengkapnya ↗</a>
                         </div>
